@@ -15,4 +15,6 @@ public interface TaskMapper
 {
     List<String> getTaskPathNeededDeleted(Long lunchTime);
     String getPath(String uuid);
+    String getName(String uuid);
+    Integer getId(String uuid);
 }

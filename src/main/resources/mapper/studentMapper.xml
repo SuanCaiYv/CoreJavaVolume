@@ -33,12 +33,15 @@
         )
     </insert>
     <select id="getUndo" parameterType="Integer" resultType="String">
-        select undo from classmanager where id = #{id}
+        select undo_task from classmanager where id = #{id}
     </select>
     <select id="getDone" resultType="String" parameterType="Integer">
         select done from classmanager where id = #{id}
     </select>
     <select id="getEmail" resultType="String" parameterType="Integer">
         select email from classmanager where id = #{id}
+    </select>
+    <select id="getSameClassroom" parameterType="com.example.test.pojo.Student" resultType="Integer">
+        select id from classmanager where department = #{student.department} and grade = #{student.grade} and classroom = #{student.classroom}
     </select>
 </mapper>

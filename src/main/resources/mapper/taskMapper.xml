@@ -15,4 +15,10 @@
     <select id="getPath" resultType="String" parameterType="String">
         select path from taskevent where uuid = #{uuid}
     </select>
+    <select id="getName" parameterType="String" resultType="String">
+        select name from taskevent where uuid = #{uuid}
+    </select>
+    <select id="getId" resultType="Integer" parameterType="String">
+        select id from taskevent where uuid = #{uuid}
+    </select>
 </mapper>

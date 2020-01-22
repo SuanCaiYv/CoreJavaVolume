@@ -10,6 +10,11 @@ class TestApplicationTests
     @Test
     void contextLoads()
     {
+        String str = "qwer,asdf,zxcv,,,,,";
+        String[] strings = str.split(",");
+        for (String string : strings) {
+            System.out.println(string);
+        }
     }
 
 }

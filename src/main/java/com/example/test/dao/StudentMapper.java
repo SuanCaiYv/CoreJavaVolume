@@ -16,6 +16,7 @@ public interface StudentMapper
 {
     List<Student> getAll();
     Student getStudent(Integer id);
+    String getName(Integer id);
     Integer getIsCommittee(Integer id);
     String getPassword(Integer id);
     void insert(Student student);
@@ -26,8 +27,9 @@ public interface StudentMapper
     String getDepartment(Integer id);
     Integer getGrade(Integer id);
     Integer updatePassword(Integer id, String undo);
-    Integer updateUndo(Integer id, String undo);
+    void updateUndo(Integer id, String undo);
     Integer updateDone(Integer id, String done);
     Integer updateIsCommittee(Integer id);
     Integer updateName(Integer is, String name);
+    List<Integer> getSameClassroom(Student student);
 }
