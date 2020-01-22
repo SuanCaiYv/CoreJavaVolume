@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            background-image: url("IMG_3246.jpg");
+        }
+    </style>
+</head>
+<body>
+<div align="center">
+    <p>班委辛苦了! 欢迎你,&nbsp<span th:text="${student.name}"></span></p>
+</div>
+<div align="center">
+    <form action="http://127.0.0.1:8080/lunch_new_task" method="post">
+        <input type="submit" value="去发布新任务">
+    </form>
+</div>
+</body>
+</html>

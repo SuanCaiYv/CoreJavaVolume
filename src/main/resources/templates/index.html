@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>索引</title>
+    <style>
+        input[type=submit] {
+            background-color: plum;
+            color: black;
+            align-content: center;
+            border: none;
+            width: 70px;
+            height: 20px;
+        }
+        body {
+            background-image: url("IMG_1563.jpg");
+        }
+    </style>
+</head>
+<body>
+<br/>
+<br/>
+<div align="center">
+    <form action="http://localhost:8080/login_in" method="post">
+        <label>
+            <input type="text" placeholder="学号" name="id" autocomplete="on" style="opacity: 50%">
+        </label>
+        <br/>
+        <br/>
+        <label>
+            <input type="password" placeholder="密码" name="password" autocomplete="on" style="opacity: 50%">
+        </label>
+        <br/>
+        <br/>
+        <input type="submit" value="登录">
+    </form>
+    <br/>
+    <br/>
+    <p style="color: white">啊哦!还没有账号</p>
+    <form action="http://localhost:8080/no_sign_up" method="post">
+        <input type="submit" value="点我注册">
+    </form>
+</div>
+</body>
+</html>

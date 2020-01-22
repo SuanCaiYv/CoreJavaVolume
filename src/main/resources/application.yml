@@ -1,0 +1,16 @@
+server:
+  port: 8080
+spring:
+  thymeleaf:
+    cache: false
+    suffix: .html
+    encoding: UTF-8
+    servlet:
+      content-type: text/html
+  datasource:
+    url: jdbc:mysql://localhost:3306/test
+    username: root
+    password: 461200
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  config-location: classpath:mybatis-config.xml

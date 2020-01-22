@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.test.dao.StudentMapper">
+    <resultMap id="student" type="com.example.test.pojo.Student">
+        <id column="id" property="id" javaType="Integer" jdbcType="INTEGER"/>
+        <result column="name" property="name" javaType="String" jdbcType="VARCHAR"/>
+        <result column="password" property="password" javaType="String" jdbcType="VARCHAR"/>
+        <result column="is_committee" property="isCommittee" javaType="Integer" jdbcType="INTEGER"/>
+        <result column="undo" property="undo" javaType="String" jdbcType="VARCHAR"/>
+        <result column="done" property="done" javaType="String" jdbcType="VARCHAR"/>
+        <result column="department" property="department" javaType="String" jdbcType="VARCHAR"/>
+        <result column="grade" property="grade" javaType="Integer" jdbcType="INTEGER"/>
+        <result column="classroom" property="classroom" javaType="Integer" jdbcType="INTEGER"/>
+        <result column="email" property="email" javaType="String" jdbcType="VARCHAR"/>
+    </resultMap>
+    <select id="getAll" resultMap="student">
+        select * from classmanager
+    </select>
+    <select id="getStudent" parameterType="Integer" resultMap="student">
+        select * from classmanager where id = #{id}
+    </select>
+    <select id="getIsCommittee" resultType="Integer" parameterType="Integer">
+        select is_committee from classmanager where id = #{id}
+    </select>
+    <select id="getPassword" resultType="String" parameterType="Integer">
+        select password from classmanager where id = #{id}
+    </select>
+    <insert id="insert" parameterType="com.example.test.pojo.Student">
+        insert into classmanager (id, name, password, department, grade, classroom, email) values (
+        #{id}, #{name}, #{password}, #{department}, #{grade}, #{classroom}, #{email}
+        )
+    </insert>
+    <select id="getUndo" parameterType="Integer" resultType="String">
+        select undo from classmanager where id = #{id}
+    </select>
+    <select id="getDone" resultType="String" parameterType="Integer">
+        select done from classmanager where id = #{id}
+    </select>
+    <select id="getEmail" resultType="String" parameterType="Integer">
+        select email from classmanager where id = #{id}
+    </select>
+</mapper>

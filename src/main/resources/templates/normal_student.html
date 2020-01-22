@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            background-image: url("IMG_9876.jpg");
+        }
+    </style>
+</head>
+<body>
+<div>
+    <script th:inline="javascript">
+        var str = "<div align='center'>";
+    </script>
+    <table>
+        <tr th:each="task : ${undo}">
+            <td th:with="url='http://127.0.0.1:8080/upload/?id='+${student.getId()}+'&task='+${task}">
+                <script th:inline="javascript">
+                    var task = [[${task}]];
+                    var url=[[${url}]];
+                    str += "<span>"+task+"</span>";
+                    str += "<"+"form action="+url+" method='post'"+">";
+                    str += "<"+"input type='submit' value='去提交'>";
+                    str += "</"+"form"+">"
+                </script>
+            </td>
+        </tr>
+    </table>
+    <script th:inline="javascript">
+        str += "<"+"/form"+">";
+        str += "</div>";
+        document.write(str);
+        document.close()
+    </script>
+</div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <style>
+        input[type=submit] {
+            background-color: pink;
+            color: black;
+            align-content: center;
+            border: none;
+            width: 70px;
+            height: 20px;
+            font-weight: bold;
+            font: -apple-system-headline;
+        }
+        body {
+            background-image: url("IMG_1518.JPG");
+        }
+    </style>
+</head>
+<body>
+<br/>
+<br/>
+<p align="center"><span style="font-weight: bolder">欢迎来到班级管理系统</span></p>
+<div align="center">
+    <form action="http://localhost:8080/sign_up" method="post">
+        <label>
+            <input type="text" name="id" placeholder="学号">
+        </label>
+        <br>
+        <br>
+        <label>
+            <input type="text" name="name" placeholder="我该怎么称呼你呢?">
+        </label>
+        <br>
+        <br>
+        <label>
+            <input type="password" name="password" placeholder="密码">
+        </label>
+        <br>
+        <br>
+        <label>
+            <input type="password" name="rePassword" placeholder="请确认密码">
+        </label>
+        <br>
+        <br>
+        <label>
+            <input type="text" name="department" placeholder="院系">
+        </label>
+        <br>
+        <br>
+        <label>
+            <input type="number" name="grade" placeholder="年级: 形式为:20xx">
+        </label>
+        <br>
+        <br>
+        <label>
+            <input type="number" name="classroom" placeholder="班级(填数字)">
+        </label>
+        <br>
+        <br>
+        <label>
+            <input type="email" name="email" placeholder="电子邮箱">
+        </label>
+        <br>
+        <br>
+        <input type="submit" value="注册">
+    </form>
+</div>
+</body>
+</html>
